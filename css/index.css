@@ -771,6 +771,11 @@ hr {
 .review-header h3 {
     font-size: 1.5em;
     color: #ca781b;
+    cursor: pointer;
+}
+
+.review-header h3:hover {
+    text-decoration: underline;
 }
 
 .rating {
@@ -836,3 +841,109 @@ footer {
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
 }
 
+.restaurant-section {
+    background-color: #fff;
+    padding: 2em;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.restaurant-container {
+    max-width: 900px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.restaurant-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-info {
+    flex: 1;
+}
+
+.restaurant-info h1 {
+    font-size: 2em;
+    color: #ca781b;
+}
+
+.restaurant-info .rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.2em;
+    color: #f4c542;
+}
+
+.restaurant-info .rating p {
+    font-size: 1em;
+    color: #555;
+}
+
+.restaurant-description {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+.reviews-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.reviews-section h2 {
+    text-align: center;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+    color: #333;
+}
+
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.review {
+    background-color: #fff;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review-header h3 {
+    font-size: 1.5em;
+    color: #ca781b;
+}
+
+.review-header .rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.2em;
+    color: #f4c542;
+}
+
+.review-text {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+.reviews-section h2 {
+    color: white;
+}
