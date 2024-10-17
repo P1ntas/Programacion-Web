@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    font-size: 1.1em;
+    background-color: white;
+}
+header img {
+    height: 40px;
+    mix-blend-mode: multiply;
+}
+
+a:link {
+    color: rgb(0, 0, 0);
+}
+
+a:visited{
+    color:rgb(0, 0, 0);
+}
+
+a:hover {
+    /*color: rgb(212, 101, 10);*/
+    color: rgb(190, 92, 12);
+}
+
+a:active {
+    color: black;
+}
+
+.bxs-cart {
+    font-size: 30px;
+}
+.bxs-user-circle {
+    font-size: 30px; 
+}
+
+.nav-menu { 
+    display: flex;
+    gap: 1.2em;
+    align-items: center;
+
+}
+
+.restaurants{
+    color:rgb(0, 0, 0);
+    margin:1em;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    margin-left: 10em;
+    margin-right: 10em; 
+    column-gap: 1em;
+    row-gap: 1.2em;
+}
+
+.restaurants .individual{
+    position: relative;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    margin: 1em;
+    height: 11.9em;
+    width: 20%;
+    flex-wrap: wrap;
+    border-radius: .5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    padding: .75rem;
+    transition: transform 270ms;
+    vertical-align: top;
+}
+
+.restaurants .individual:hover{
+    transform: translateY(-25px);
+    transition-timing-function: linear;
+    background-color: rgba(255, 255, 255, 0.2);
+    
+}
+
+.restaurants .individual:hover .restaurant-description{
+    transform: translateY(-160%);
+    visibility: visible;
+    text-justify: center;
+    margin-top: 1.8em;
+}
+
+.restaurants .individual:hover img{
+    top:-100%; 
+    left:0;
+    opacity: 0.05;
+}
+
+.individual img{
+    object-fit: cover;
+    width: 100%;
+    height: 9em;
+    align-self: center;
+    margin-bottom: 1rem;
+    top: 0;
+}
+
+.restaurant-name{
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.restaurant-description{
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    visibility: hidden;
+}
+
+.rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1em;
+}
+
+.review{
+    margin-left: 2em;
+    margin-top: 1em;
+}
+
+.review .list-review{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    width: 40em;
+    height: 5em;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+.restaurant-header{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+.restaurant-header img{
+    object-fit: cover;
+    width: 100%;
+    height: 9em;
+    align-self: center;
+    margin-bottom: 1rem;
+}
+
+.restaurant-name-header{
+    font-size: 3em;
+    margin-left: 1em;
+    text-align: left;
+    font-weight: 900;
+
+}
+
+.restaurant-info{
+    display: flex;
+    flex-direction: row;
+    column-gap: 60px;
+    text-align: center;
+}
+.restaurant-info .restaurant-rating{
+    font-size: 2em;
+    text-align: center;
+}
+
+.restaurant-rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1em;
+}
+.rating * {
+    font-size: 17px;
+}
+
+.restaurant-description-header {
+    font-size:1em;
+    text-align: left;
+    padding: 1em;
+    margin-left: 2em;
+}
+
+.dishes{
+    color:rgb(0, 0, 0);
+    margin:1em;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    margin-left: 10em;
+    margin-right: 10em;  
+}
+
+.dishes .individual{
+    position: relative;
+    cursor: pointer;
+    background-color: white;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    margin: 1em;
+    height: 11.9em;
+    width: 20%;
+    flex-wrap: wrap;
+    border-radius: .5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    padding: .75rem;
+    transition: transform 270ms;
+    vertical-align: top;
+}
+.dish-name{
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.dish-price{
+    margin-top: 1em;
+}
+.dishes .individual img{
+    object-fit: cover;
+    width: 100%;
+    height: 9em;
+    align-self: center;
+    margin-bottom: 1rem;
+}
+.footer {
+    background-color: rgba(255, 255, 255,0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 11px;
+    margin-top: 140px;
+    padding: 20px;
+    box-shadow: 0 0 1em rgb(59, 59, 59);
+}
+
+.footer img{
+    height: 45px;
+}
+
+.footer-description{
+    font-size:10px;
+    color: black;
+}
+.dish-price::after{
+    content: '€';
+}
+.bxs-cart {
+    font-size: 30px;
+}
+bx bxs-cart {
+    width: 390px;
+}
+bxs-cart-add {
+    width: 390px;
+}
+.logout-button{
+    border-radius: 15px;
+	border: 1px solid #8f4c16;
+	background-color: #ca781b;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 10px 30px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+	cursor: pointer;
+    
+}
+.username{
+    border-radius: 15px;
+    border: 1px solid #8f4c16; 
+    background-color: #f9f8f6;
+    font-size: 10px;
+	font-weight: bold;
+	padding: 10px 30px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+	cursor: pointer;
+}
+/*.restaurant-price{
+    font-size: 30px;
+    color: black;
+}
+.dishes{
+    display: flex;
+    flex-direction: row;
+    color:rgb(0, 0, 0);
+    margin: 5em;
+}
+
+.dish{
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 9px 10px 9px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0.5em;
+    border-radius: 3%;
+}
+
+.dish-name {
+    font-size: 20px;
+    color: black;
+} 
+
+footer {
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 11px;
+    margin-top: 140px;
+    padding: 20px;
+    box-shadow: 0 0 1em rgb(59, 59, 59);
+}
+
+footer img{
+    height: 23px;
+}
+.dish-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+.dish-price{
+    font-size: 20px;
+    color: black;  
+}
+.beverage-name{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+.beverage-price{
+    font-size: 20px;
+    color: black;  
+}
+.individual individual-dish{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+*/
+

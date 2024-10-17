@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+    <html lang="en-uS">
+    <head>
+        <title>Food2Go - Order your food now!</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <link href="../css/index.css"rel="stylesheet">
+    </head>
+<!--header-->
+    <body>
+        <header> 
+            <a href="../pages/index.html"><img class="logo"src="../img/logo.png" alt="logo"></a>
+            <nav class="nav-menu">
+                <a href="../pages/restaurants.html">Restaurants</a>
+                <a href="../pages/dishes.html">Reviews</a>
+                <a href="../pages/contacts.html">Contact Us</a>
+            </nav>
+            <form action="../pages/login.html" class="logout">
+                <a class="username" href="../pages/profile.html">Afonso</a>
+                <button class="logout-button" type="submit">Logout</button>
+              </form>
+        </header>
+        <main class="prof">
+            <div class="profile">
+                <div class="title">
+                    <h2> Edit Your information </h2>
+                </div>
+                <hr>
+                <div class="form">
+                    <form action="../pages/index.html">
+                        <div class="input_field">
+                          <label for="username"><b>Username</b></label>
+                           <input type="text" name="username" value="Afonso"><br>
+                        </div>
+                        <div class="input_field">
+                          <label for="email"><b>Email</b></label>
+                           <input type="email" name="email" value="adasilvapinto@itba.edu.ar" readonly><br>
+                        </div>
+                        <div class="input_field">
+                          <label for="age"><b>Age</b></label>
+                          <input type="text" name="age" value="22"><br>
+                        </div>
+                        <div class="input_field">
+                             <label for="address"><b>Address</b></label>
+                             <input type="text" name="address" value="José Leon Pagano"><br>
+                        </div>
+                        <div class="input_field">
+                          <label for="phoneNumber"><b>Phone Number</b></label>
+                          <input type="text" name="phone" value="+54911265457"><br>
+                        </div>
+                        <div class="input_field_edit">
+                            <button class="logout-button" type="submit" name="edit"><b>Save Changes</b></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <img src="../img/logo.png" href="../pages/index.html" alt="logo">
+            <ul>
+            <li><p class="footer-description">Afonso Pinto &copy; 2024</p></li>
+            <li><p class="footer-description">Calle San Martin, Buenos Aires</p></li>
+        </ul>
+        </footer>
+    </body>
+</html>
