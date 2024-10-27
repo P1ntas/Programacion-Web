@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+    <html lang="en-uS">
+    <head>
+        <title>Food2Go - Order your food now!</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <link href="../css/index.css"rel="stylesheet">
+    </head>
+<body>
+    <header> 
+        <a href="../pages/index.html"><img class="logo"src="../img/logo.png" alt="logo"></a>
+        <nav class="nav-menu">
+            <a href="../pages/restaurants.html">Restaurants</a>
+            <a href="../pages/dishes.html">Reviews</a>
+            <a href="../pages/contacts.html">Contact Us</a>
+        </nav>
+        <form action="../pages/login.html" class="logout">
+            <a class="username" href="../pages/profile.html">Afonso</a>
+            <button class="logout-button" type="submit">Logout</button>
+          </form>
+    </header>
+
+    <main>
+        <section class="review-section">
+            <div class="review-container">
+                <h1>Restaurant Reviews</h1>
+                <p>Read and share your dining experiences</p>
+                
+                <!-- Existing Reviews Section -->
+                <div class="review-list">
+                    <h2>Latest Reviews</h2>
+                    
+                    <!-- Review 1 -->
+                    <div class="review">
+                        <div class="review-header">
+                            <a href="rest.html"><h3>Boa Bao</h3></a>
+                            <div class="rating">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                                <p>4.5</p>
+                            </div>
+                        </div>
+                        <p class="review-text">
+                            Amazing Asian fusion! The food was flavorful and the ambiance was perfect. Would definitely recommend Boa Bao to anyone who loves a good dining experience.
+                        </p>
+                        <p class="review-author">- Reviewed by John Doe</p>
+                    </div>
+                    
+                    <!-- Review 2 -->
+                    <div class="review">
+                        <div class="review-header">
+                            <a href="rest.html"><h3>Sushi Haven</h3></a>
+                            <div class="rating">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bx-star'></i>
+                                <p>4.0</p>
+                            </div>
+                        </div>
+                        <p class="review-text">
+                            Delicious sushi with fresh ingredients, but the service was a bit slow. Overall, a good experience.
+                        </p>
+                        <p class="review-author">- Reviewed by Jane Smith</p>
+                    </div>
+                    
+                    <!-- Add more reviews as needed -->
+                </div>
+
+                <!-- Add a Review Section -->
+                <div class="add-review">
+                    <h2>Add Your Review</h2>
+                    <form action="../pages/submit-review.html" method="post" class="review-form">
+                        <div class="input_field">
+                            <label for="restaurant-name">Restaurant Name</label>
+                            <input type="text" id="restaurant-name" name="restaurant" placeholder="Restaurant Name" required>
+                        </div>
+                        <div class="input_field">
+                            <label for="rating">Rating</label>
+                            <select id="rating" name="rating" required>
+                                <option value="5">5 Stars</option>
+                                <option value="4">4 Stars</option>
+                                <option value="3">3 Stars</option>
+                                <option value="2">2 Stars</option>
+                                <option value="1">1 Star</option>
+                            </select>
+                        </div>
+                        <div class="input_field">
+                            <label for="review-text">Your Review</label>
+                            <textarea id="review-text" name="review" rows="4" placeholder="Write your review here..." required></textarea>
+                        </div>
+                        <div class="input_field">
+                            <button class="submit-button" type="submit">Submit Review</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <img src="../img/logo.png" href="../pages/index.html" alt="logo">
+        <ul>
+            <li><p class="footer-description">Afonso Pinto &copy; 2024</p></li>
+            <li><p class="footer-description">Calle San Martin, Buenos Aires</p></li>
+        </ul>
+    </footer>
+</body>
+</html>
