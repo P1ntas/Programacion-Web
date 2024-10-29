@@ -229,4 +229,142 @@ input {
 	transform: translateX(20%);
 }
 
+/* General styling remains as is */
 
+/* Responsive adjustments */
+
+/* For larger screens */
+.container {
+    width: 768px; /* Fixed width for larger screens */
+    max-width: 100%;
+    display: flex;
+    flex-direction: row; /* Side-by-side layout */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* For the form containers */
+.form-container {
+    width: 50%; /* Each form takes half of the container */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Medium screens (768px and below) */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+        min-height: 700px;
+        flex-direction: column; /* Stack forms vertically */
+    }
+
+    .form-container {
+        width: 100%; /* Full width for each form */
+        padding: 20px;
+        position: relative;
+        height: auto;
+    }
+
+    /* Hide overlay on medium screens */
+    .overlay-container,
+    .container.right-panel-active .overlay-container {
+        display: none !important;
+    }
+
+    /* Remove transform, opacity, z-index for form containers */
+    .sign-in-container,
+    .sign-up-container {
+        transform: none !important;
+        opacity: 1 !important;
+        z-index: auto !important;
+        position: static !important;
+        width: 100%;
+    }
+
+    .sign-in-container img,
+    .sign-up-container img {
+        width: 180px;
+        margin-bottom: 1em;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    p, span, a {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px 25px;
+        font-size: 12px;
+    }
+
+    input {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Small screens (480px and below) */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+        box-shadow: none;
+        flex-direction: column; /* Stack vertically */
+    }
+
+    .form-container {
+        padding: 15px;
+        width: 100%;
+        position: relative;
+    }
+
+    .sign-in-container img,
+    .sign-up-container img {
+        width: 150px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p, span, a {
+        font-size: 12px;
+    }
+
+    button {
+        padding: 8px 20px;
+        font-size: 10px;
+    }
+
+    input {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    a {
+        margin: 10px 0;
+    }
+
+    /* Ensure overlay is completely hidden on small screens */
+    .overlay-container {
+        display: none !important;
+    }
+
+    /* Ensure full visibility of both forms */
+    .sign-in-container,
+    .sign-up-container {
+        transform: none !important;
+        opacity: 1 !important;
+        z-index: auto !important;
+        position: static !important;
+        width: 100%; /* Full width for smaller screens */
+    }
+}

@@ -108,8 +108,8 @@ button {
     opacity: 80%;
     box-shadow: 9px 10px 9px rgba(0, 0, 0, 0.7);
     display: flex;
-    justify-content: center;
-    border-radius: 50px;
+    justify-content: space-between;
+    border-radius: 40px;
     margin:34px;
     
 }
@@ -119,19 +119,19 @@ button {
     flex: 1;
     border: 0;
     outline: none;
-    padding: 24px 20px;
-    font-size: 21px;
+    padding: 20px; 
+    font-size: 20px;
     color: #000000;
 
 }
 
 ::placeholder{
     color:#000000;
-    font-size: 21px;
+    font-size: 20px;
 }
 
 .search-bar button img{
-    width: 46px;
+    width: 40px;
     mix-blend-mode: multiply;
 }
 
@@ -143,6 +143,53 @@ button {
     background: transparent;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .search-bar {
+        width: 80%; /* Increased width for medium screens */
+        max-width: 90%;
+        height: 45px; /* Adjusted height */
+        padding: 5px; /* Reduce padding for fit */
+    }
+    .search-bar input {
+        font-size: 14px; /* Adjust font size */
+        padding: 8px; /* Reduce padding */
+    }
+    .search-bar button img {
+        width: 20px; /* Adjusted image size */
+        height: 20px;
+    }
+    .search-bar button {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Small screen adjustments */
+@media (max-width: 480px) {
+    .search-bar {
+        width: 90%; /* Full width for smaller screens */
+        height: 40px; /* Reduced height */
+        padding: 4px; /* Less padding */
+        align-items: center; /* Centers contents vertically */
+        
+    }
+    .search-bar input {
+        font-size: 14px; /* Adjust font size further */
+        padding: 6px; /* Reduce padding */
+    }
+    .search-bar button img {
+        width: 18px; /* Further reduce image size */
+        height: 18px;
+    }
+    .search-bar button {
+        width: 30px;
+        height: 30px;
+        margin-left: -100px;
+        margin-bottom: 20px;
+    }
+}
+
 a:link {
     color: rgb(0, 0, 0);
 }
@@ -195,21 +242,52 @@ bx bxs-cart {
     /*background-color: #e29f53;*/
     background-color: rgba(255, 255, 255, 0.55);
     box-shadow: 9px 10px 9px rgba(0, 0, 0, 0.7);
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     color: white;
     padding: 0.5em;
+    margin: 10px 0;
 }
 .category a{
     transition: all 280ms ease-in;
+    padding: 5px 15px; /* Adds padding for clickable area */
+    text-decoration: none;
 }
 .category a:hover{
-    font-size: 37px;
+    font-size: 30px;
 }
+
+@media (max-width: 768px) {
+    .category {
+        flex-wrap: wrap; /* Allows items to wrap to the next line */
+        gap: 10px; /* Adds spacing between items */
+        font-size: 20px; /* Slightly reduce font size */
+    }
+    .category a {
+        padding: 5px 10px; /* Adjust padding */
+    }
+}
+
+/* Small screens (480px and below) */
+@media (max-width: 480px) {
+    .category {
+        flex-direction: column; /* Stack items vertically */
+        font-size: 18px; /* Reduce font size for readability */
+        padding: 0.5em 0; /* Adjust padding */
+        gap: 8px; /* Reduce gap between items */
+        text-align: center; /* Center align text */
+    }
+    .category a {
+        padding: 10px 0; /* Increased padding for better touch area */
+        width: 100%; /* Full width to span the container */
+    }
+}
+
 .everything{
     background-image: url("food.jpg");
     background-repeat:no-repeat;
@@ -244,6 +322,22 @@ bx bxs-cart {
     flex-direction: column;
     justify-content: space-between;
     max-width: 300px;
+}
+
+@media (max-width: 768px) {
+    .restaurants .individual {
+        background-color: #fff;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-basis: 100%; /* Full width for each card */
+    max-width: 800px; /* Optional: limit maximum width if desired */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+        margin: 10px 20px;;
+    }
 }
 
 .restaurants .individual:hover {
@@ -578,158 +672,6 @@ hr {
     outline: none;
 }
 
-/* Responsive adjustments for small screens */
-@media (max-width: 1024px) {
-    /* Adjust header layout */
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1em;
-    }
-
-    .nav-menu {
-        justify-content: flex-start;
-        gap: 1em;
-        flex-wrap: wrap;
-    }
-
-    .logout {
-        margin-top: 10px;
-        align-self: flex-end;
-    }
-
-    /* Reduce padding in the content section */
-    .content {
-        padding: 40px;
-    }
-
-    /* Responsive text size adjustments */
-    h1 {
-        font-size: 40px;
-    }
-
-    p {
-        font-size: 20px;
-    }
-
-    .search-bar {
-        width: 80%;
-    }
-
-    .category {
-        font-size: 24px;
-    }
-}
-
-@media (max-width: 768px) {
-    /* Further adjustments for smaller screens */
-    header {
-        padding: 1em 0.5em;
-        text-align: center;
-    }
-
-    .nav-menu {
-        justify-content: center;
-        gap: 0.8em;
-    }
-
-    .logout {
-        text-align: center;
-        margin-top: 10px;
-        width: 100%;
-    }
-
-    /* Stack categories vertically */
-    .category {
-        flex-direction: column;
-        font-size: 20px;
-        padding: 0.8em;
-        margin-bottom: 10px;
-    }
-
-    /* Reduce content section padding */
-    .content {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 30px;
-    }
-
-    p {
-        font-size: 18px;
-    }
-
-    .search-bar {
-        width: 90%;
-        max-width: 90%;
-        padding: 10px;
-    }
-
-    /* Make restaurants display one per row */
-    .restaurants .individual {
-        flex-basis: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Adjust for mobile phones */
-    .nav-menu {
-        flex-direction: column;
-        gap: 0.5em;
-        text-align: center;
-    }
-
-    .logout-button {
-        padding: 10px;
-        width: 100%;
-    }
-
-    .username {
-        padding: 5px;
-        font-size: 12px;
-    }
-
-    h1 {
-        font-size: 25px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    .search-bar {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .category {
-        font-size: 18px;
-        padding: 0.5em;
-        margin-bottom: 5px;
-    }
-
-    .category a:hover {
-        font-size: 20px;
-    }
-
-    .footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer ul {
-        margin-top: 10px;
-    }
-
-    /* Adjust restaurant cards to fit smaller screens */
-    .restaurants .individual {
-        flex-basis: 100%;
-        margin: 10px 0;
-    }
-}
-
 .review-section {
     display: flex;
     justify-content: center;
@@ -947,3 +889,4 @@ footer {
 .reviews-section h2 {
     color: white;
 }
+
