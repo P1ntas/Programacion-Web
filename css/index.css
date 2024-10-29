@@ -41,24 +41,72 @@ header {
     box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
     background-color: white;
     position: relative;
+    color: #000000 !important;
 }
 
 .logo {
     height: 40px;
 }
 
+/* Default hidden state for nav-menu */
 .nav-menu {
-    display: flex;
+    display: flex; /* Show menu on larger screens */
     gap: 1.2em;
     align-items: center;
+    opacity: 1; /* Ensure it's fully visible */
+    transform: translateY(0); /* No sliding on desktop */
+    pointer-events: auto;
+    transition: none; /* No transition on desktop */
 }
 
+/* Active state to show the menu */
+.nav-menu.active {
+    opacity: 1;
+    transform: translateY(0); /* Slide down to visible */
+    pointer-events: auto; /* Enable clicks */
+}
+
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Hide menu by default on mobile */
+        flex-direction: column;
+        gap: 1em;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 1em;
+        z-index: 100;
+        opacity: 0; /* Start as invisible */
+        transform: translateY(-20px); /* Slide up when hidden */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    }
+
+    /* Active state to show the menu on mobile */
+    .nav-menu.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0); /* Slide down to visible */
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu button on mobile screens */
+        background-color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu-toggle i {
+        font-size: 25px;
+    }
+}
+
+/* Hide the menu toggle button on desktop */
 .menu-toggle {
     display: none;
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
 }
 
 .logout-container {
