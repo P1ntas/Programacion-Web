@@ -32,16 +32,112 @@ main {
 
 
 
+/* Default Header Styles */
 header {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5em;
+    padding: 0.5em 1em;
     box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
-    font-size: 1.1em;
     background-color: white;
+    position: relative;
 }
+
+.logo {
+    height: 40px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1.2em;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.logout-container {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.username, .logout-button {
+    font-size: 12px;
+    padding: 8px 12px;
+}
+
+.logout-button {
+    border-radius: 15px;
+    border: 1px solid #8f4c16;
+    background-color: #ca781b;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* Responsive Styling for Mobile Screens (768px and below) */
+@media (max-width: 768px) {
+    /* Adjustments for header elements */
+    .logo {
+        height: 30px;
+    }
+
+    .menu-toggle {
+        display: block;
+        color: #000000;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 1em;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        max-height: 0;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 1em;
+        z-index: 100;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-menu a {
+        padding: 0.5em 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .logout-container {
+        flex-direction: column; /* Stack profile and logout buttons */
+        align-items: center;
+        gap: 0.5em;
+    }
+
+    .username, .logout-button {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+
+    /* Toggle the menu visibility when active */
+    .nav-menu.active {
+        display: flex;
+        max-height: 500px;
+    }
+
+    header img {
+        width: 100px;
+        height: auto;
+    }
+}
+
 
 header img {
     height: 40px;
@@ -83,13 +179,6 @@ button {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-}
-
-.nav-menu { 
-    display: flex;
-    gap: 1.2em;
-    align-items: center;
-
 }
 
 .content {
@@ -440,36 +529,8 @@ footer {
     color: black;
 }
 
-.logout-button{
-    border-radius: 15px;
-	border: 1px solid #8f4c16;
-	background-color: #ca781b;
-	color: #FFFFFF;
-	font-size: 12px;
-	font-weight: bold;
-	padding: 10px 30px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	transition: transform 80ms ease-in;
-	cursor: pointer;
-    
-}
-
 .logout-button:hover {
     background-color: #8f4c16;
-}
-
-.username{
-    border-radius: 15px;
-    border: 1px solid #8f4c16; 
-    background-color: #f9f8f6;
-    font-size: 10px;
-	font-weight: bold;
-	padding: 10px 30px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	transition: transform 80ms ease-in;
-	cursor: pointer;
 }
 
 .contact-main {
