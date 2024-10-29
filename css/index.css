@@ -999,3 +999,49 @@ footer {
     color: white;
 }
 
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer ul {
+        padding-top: 10px;
+    }
+
+    .footer-description {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .restaurant-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%; /* Full width on mobile */
+        gap: 1em; /* Smaller gap between items */
+    }
+
+    .restaurant-image img {
+        width: 100%; /* Image takes full width */
+        max-width: 100%; /* Ensure it does not exceed container width */
+        margin-bottom: 1em;
+        border-radius: 10px;
+    }
+
+    .restaurant-info {
+        width: 100%; /* Text content takes full width */
+    }
+
+    .restaurant-info h1 {
+        font-size: 1.5em;
+    }
+
+    .restaurant-description {
+        font-size: 0.9em;
+        margin-top: 10px;
+    }
+}
