@@ -32,11 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return review;
     };
 
-    // Event listener for form submission
     reviewForm.addEventListener('submit', (e) => {
-        e.preventDefault(); // Prevent form refresh
+        e.preventDefault();
 
-        // Get form values
         const restaurantName = document.getElementById('restaurant-name').value.trim();
         const rating = parseInt(document.getElementById('rating').value);
         const reviewText = document.getElementById('review-text').value.trim();
@@ -46,11 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Create a new review and append to the list
         const newReview = createReviewElement(restaurantName, rating, reviewText);
         reviewList.appendChild(newReview);
 
-        // Clear form fields
         reviewForm.reset();
     });
 });
