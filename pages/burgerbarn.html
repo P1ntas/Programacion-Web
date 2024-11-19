@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-uS">
+<head>
+    <title>Burger Barn - Food2Go</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="../css/index.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img class="logo" src="../img/logo.png" alt="logo"></a>
+        <button class="menu-toggle" aria-label="Open menu">
+            <i class="bx bx-menu"></i>
+        </button>
+        <nav class="nav-menu active">
+            <a href="../pages/restaurants.html">Restaurants</a>
+            <a href="../pages/dishes.html">Reviews</a>
+            <a href="../pages/contacts.html">Contact Us</a>
+        </nav>
+        <div class="logout-container">
+            <a class="username" href="../pages/profile.html">Afonso</a>
+            <button class="logout-button" type="submit">Logout</button>
+        </div>
+    </header>
+    <main>
+        <section class="restaurant-section">
+            <div class="restaurant-container">
+                <div class="restaurant-image">
+                    <img src="../assets/burger.jpeg" alt="Burger Barn Restaurant">
+                </div>
+                <div class="restaurant-info">
+                    <h1>Burger Barn</h1>
+                    <div class="rating">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bx-star'></i>
+                        <p>4.3 (Based on 120 Reviews)</p>
+                    </div>
+                    <p class="restaurant-description">
+                        Craving a classic burger? We've got the juiciest burgers served with crispy fries. Whether you love a traditional cheeseburger or a gourmet creation, Burger Barn has something for every burger enthusiast.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="reviews-section">
+            <h2>Top Reviews</h2>
+            <div class="reviews-container">
+                <div class="review">
+                    <div class="review-header">
+                        <a href="profile.html"><h3>Tom Harris</h3></a>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <p>4.0</p>
+                        </div>
+                    </div>
+                    <p class="review-text">
+                        Great burgers and amazing fries! The portions are generous, and the quality is consistent. A must-visit for burger lovers.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <img src="../img/logo.png" href="../index.html" alt="logo">
+        <ul>
+            <li><p class="footer-description">Afonso Pinto &copy; 2024</p></li>
+            <li><p class="footer-description">Calle San Martin, Buenos Aires</p></li>
+        </ul>
+    </footer>
+    <script src="/js/header.js"></script>
+</body>
+</html>

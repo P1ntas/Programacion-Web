@@ -1038,3 +1038,23 @@ footer {
         margin-top: 10px;
     }
 }
+
+.bolding {
+    margin-top: 0.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.centering {
+    margin-top: 3em;
+    text-align: center;
+}
+
+.white {
+    color: white !important;
+}
+
+.white:hover {
+    color: rgb(190, 92, 12) !important;
+    font-weight: bold;
+}

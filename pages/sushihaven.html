@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-uS">
+<head>
+    <title>Sushi Haven - Food2Go</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="../css/index.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img class="logo" src="../img/logo.png" alt="logo"></a>
+        <button class="menu-toggle" aria-label="Open menu">
+            <i class="bx bx-menu"></i>
+        </button>
+        <nav class="nav-menu active">
+            <a href="../pages/restaurants.html">Restaurants</a>
+            <a href="../pages/dishes.html">Reviews</a>
+            <a href="../pages/contacts.html">Contact Us</a>
+        </nav>
+        <div class="logout-container">
+            <a class="username" href="../pages/profile.html">Afonso</a>
+            <button class="logout-button" type="submit">Logout</button>
+        </div>
+    </header>
+    <main>
+        <section class="restaurant-section">
+            <div class="restaurant-container">
+                <div class="restaurant-image">
+                    <img src="../assets/sushi.jpeg" alt="Sushi Haven Restaurant">
+                </div>
+                <div class="restaurant-info">
+                    <h1>Sushi Haven</h1>
+                    <div class="rating">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bx-star-half'></i>
+                        <p>4.6 (Based on 150 Reviews)</p>
+                    </div>
+                    <p class="restaurant-description">
+                        Indulge in the finest sushi in town, made with the freshest ingredients and traditional techniques. Sushi Haven offers a delightful dining experience for sushi enthusiasts.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="reviews-section">
+            <h2>Top Reviews</h2>
+            <div class="reviews-container">
+                <div class="review">
+                    <div class="review-header">
+                        <a href="profile.html"><h3>Anna Kim</h3></a>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star-half'></i>
+                            <p>4.5</p>
+                        </div>
+                    </div>
+                    <p class="review-text">
+                        The sushi was incredibly fresh, and the atmosphere was relaxing. Highly recommend!
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <img src="../img/logo.png" href="../index.html" alt="logo">
+        <ul>
+            <li><p class="footer-description">Afonso Pinto &copy; 2024</p></li>
+            <li><p class="footer-description">Calle San Martin, Buenos Aires</p></li>
+        </ul>
+    </footer>
+    <script src="/js/header.js"></script>
+</body>
+</html>
