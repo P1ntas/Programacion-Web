@@ -24,7 +24,6 @@ h1 {
 h2 {
 	text-align: center;
 }
-/*@supports (-webkit-text-stroke: 1px black) {*/
 	h3 {
 	font-size: 40px;
 	font-weight: bold;
@@ -177,8 +176,6 @@ input {
 .overlay {
 	background: #cf6208;
 	background-image: url("../img/background.jpg");
-	/*background: -webkit-linear-gradient(to right, #ff9c2b, #e09f55e8);
-	background: linear-gradient(to right, #ff9c2b, #e09f55e8);*/
 	-webkit-text-stroke: #8f4c16;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -229,23 +226,17 @@ input {
 	transform: translateX(20%);
 }
 
-/* General styling remains as is */
-
-/* Responsive adjustments */
-
-/* For larger screens */
 .container {
-    width: 768px; /* Fixed width for larger screens */
+    width: 768px; 
     max-width: 100%;
     display: flex;
-    flex-direction: row; /* Side-by-side layout */
+    flex-direction: row; 
     border-radius: 10px;
     overflow: hidden;
 }
 
-/* For the form containers */
 .form-container {
-    width: 50%; /* Each form takes half of the container */
+    width: 50%; 
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -253,29 +244,26 @@ input {
     justify-content: center;
 }
 
-/* Medium screens (768px and below) */
 @media (max-width: 768px) {
     .container {
         width: 100%;
         max-width: 100%;
         min-height: 700px;
-        flex-direction: column; /* Stack forms vertically */
+        flex-direction: column;
     }
 
     .form-container {
-        width: 100%; /* Full width for each form */
+        width: 100%;
         padding: 20px;
         position: relative;
         height: auto;
     }
 
-    /* Hide overlay on medium screens */
     .overlay-container,
     .container.right-panel-active .overlay-container {
         display: none !important;
     }
 
-    /* Remove transform, opacity, z-index for form containers */
     .sign-in-container,
     .sign-up-container {
         transform: none !important;
@@ -310,14 +298,13 @@ input {
     }
 }
 
-/* Small screens (480px and below) */
 @media (max-width: 480px) {
     .container {
         width: 100%;
         min-height: 100vh;
         border-radius: 0;
         box-shadow: none;
-        flex-direction: column; /* Stack vertically */
+        flex-direction: column; 
     }
 
     .form-container {
@@ -353,18 +340,16 @@ input {
         margin: 10px 0;
     }
 
-    /* Ensure overlay is completely hidden on small screens */
     .overlay-container {
         display: none !important;
     }
 
-    /* Ensure full visibility of both forms */
     .sign-in-container,
     .sign-up-container {
         transform: none !important;
         opacity: 1 !important;
         z-index: auto !important;
         position: static !important;
-        width: 100%; /* Full width for smaller screens */
+        width: 100%;
     }
 }
